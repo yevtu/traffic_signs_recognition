@@ -9,7 +9,7 @@ def random_brightness(img):
     return cv2.cvtColor(img, cv2.COLOR_HSV2RGB)
 
 
-def get_image(path, augment, target_size=(32, 32)):
+def get_image(path, augment=False, target_size=(32, 32)):
     img = cv2.cvtColor(cv2.imread(path), cv2.COLOR_BGR2RGB).astype('float32')
     img *= 1./255
 
